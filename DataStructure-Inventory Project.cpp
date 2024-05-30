@@ -446,7 +446,7 @@ void AdjustProduct(clistproduct* pro) {
             cin >> ptr->price;
 
             // Save changes to the file
-            ofstream file("C:\\Users\\elhag\\OneDrive\\Desktop\\clistproduct.txt");
+            ofstream file("write your file extension here");
             Product* ptrave = pro->phead;
             while (ptrave != NULL) {
                 file << ptrave->Pid << "," << ptrave->Pname << "," << ptrave->stock << "," << ptrave->price << "," << ptrave->exp_month << "," << ptrave->exp_year << endl;
@@ -487,7 +487,7 @@ void DeleteProduct(clistproduct* pro)
                 previous->pnext = current->pnext;
             }
 
-            ofstream file("C:\\Users\\elhag\\OneDrive\\Desktop\\clistproduct.txt");
+            ofstream file("write your file extension here");
             Product* ptrave = pro->phead;
             while (ptrave != NULL) {
                 file << ptrave->Pid << "," << ptrave->Pname << "," << ptrave->stock << "," << ptrave->price << "," << ptrave->exp_month << "," << ptrave->exp_year << endl;
@@ -538,7 +538,7 @@ void AddNewProduct(clistproduct* pro) {
     pro->attach(newProduct);
 
    
-    ofstream file("C:\\Users\\elhag\\OneDrive\\Desktop\\clistproduct.txt");
+    ofstream file("write your file extension here");
     Product* ptrave = pro->phead;
     while (ptrave != NULL) {
         file << ptrave->Pid << "," << ptrave->Pname << "," << ptrave->stock << "," << ptrave->price << "," << ptrave->exp_month << "," << ptrave->exp_year << endl;
@@ -616,7 +616,7 @@ int main() {
     ifstream file4;
     clistAdmin la;
 
-    file.open("C:\\Users\\elhag\\OneDrive\\Desktop\\clistproduct.txt");
+    file.open("write your file extension here");
 
     if (!file.is_open()) {
         cerr << "Error opening file: clistproduct.txt" << endl;
@@ -648,7 +648,7 @@ int main() {
 
     file.close();
 
-    file2.open("C:\\Users\\elhag\\OneDrive\\Desktop\\clistcustomer.txt");
+    file2.open("write your file extension here");
 
 
     if (!file2.is_open()) {
@@ -678,7 +678,7 @@ int main() {
 
     file2.close();
 
-    file3.open("C:\\Users\\elhag\\OneDrive\\Desktop\\clistorder.txt");
+    file3.open("write your file extension here");
     if (!file3.is_open()) {
         cerr << "Error opening file: clistorder.txt" << endl;
         return 1;
@@ -706,7 +706,7 @@ int main() {
 
     file3.close();
 
-    file4.open("C:\\Users\\elhag\\OneDrive\\Desktop\\clistadmin.txt");
+    file4.open("write your file extension here");
     if (!file4.is_open()) {
         cerr << "Error opening file: clistadmin.txt" << endl;
         return 1;
